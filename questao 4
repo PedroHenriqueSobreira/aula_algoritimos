@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int A, B;
+
+    // Lê os valores inteiros A e B
+    scanf("%d", &A);
+    scanf("%d", &B);
+
+    // Verifica se A e B são iguais
+    if (A == B) {
+        printf("Os valores lidos sao iguais\n");
+    } else {
+        // Encontra o maior valor entre A e B
+        int maior = (A > B) ? A : B;
+
+        // Encontra o menor valor entre A e B
+        int menor = (A < B) ? A : B;
+
+        // Verifica se o maior valor é múltiplo do menor valor
+        if (maior % menor == 0) {
+            printf("O maior valor e %d e e multiplo do menor valor.\n", maior);
+        } else {
+            printf("O maior valor e %d e nao e multiplo do menor valor.\n", maior);
+        }
+    }
+
+    return 0;
+}
